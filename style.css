@@ -1,0 +1,168 @@
+/* Reset styles */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Body styles */
+
+body {
+	font-family: "Helvetica Neue", sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	background-color: #f0f0f0;
+	color: #333;
+}
+
+/* Header styles */
+
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #fff;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+}
+
+header h1 {
+	font-size: 2.5em;
+	margin-bottom: 10px;
+	color: #333;
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+}
+
+nav li {
+	margin-right: 20px;
+}
+
+nav a {
+	color: #333;
+	text-decoration: none;
+	transition: color 0.2s ease-in-out;
+}
+
+nav a:hover {
+	color: #007aff;
+}
+
+/* Main styles */
+
+main {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+section {
+	margin-bottom: 50px;
+}
+
+section h2 {
+	font-size: 2em;
+	margin-bottom: 20px;
+	color: #333;
+}
+
+ul {
+	list-style: none;
+}
+
+.project {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #fff;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+.project img {
+	max-width: 100%;
+	margin-bottom: 10px;
+}
+
+.project h3 {
+	font-size: 1.5em;
+	margin-bottom: 10px;
+	color: #333;
+}
+
+.project p {
+	margin-bottom: 10px;
+}
+
+.project a {
+	color: #007aff;
+	text-decoration: none;
+	transition: color 0.2s ease-in-out;
+}
+
+.project a:hover {
+	color: #005aff;
+}
+
+/* Form styles */
+
+form {
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+}
+
+label {
+	font-size: 1.2em;
+	margin-bottom: 10px;
+	color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+	border: none;
+	border-radius: 5px;
+	background-color: #f0f0f0;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+textarea {
+	resize: none;
+	height: 200px;
+}
+
+input[type="submit"] {
+	background-color: #007aff;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 1.2em;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in-out;
+}
+
+input[type="submit"]:hover {
+	background-color: #005aff;
+}
+
+/* Footer styles */
+
+footer {
+	background-color: #fff;
+	box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	text-align: center;
+	font-size: 0.8em;
+	color: #666;
+}
