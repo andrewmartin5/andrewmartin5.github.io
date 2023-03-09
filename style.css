@@ -1,8 +1,33 @@
-body {
-    min-height: 75rem;
-    padding-top: 4.5rem;
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+html,
+body,
+main {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
 }
 
-.hero-header {
-    min-height: 100%;
+body {
+    font-family: 'Space Mono', monospace;
+    padding: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+div.level {
+    height: max(80vh, 100%);
+    margin: max(10vh, 4.5rem) 0;
+}
+
+a.nav-link {
+    color: white;
+}
+
+h1.title {
+    font-size: 5vh;
+    font-weight: bolder;
 }
