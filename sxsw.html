@@ -8,28 +8,67 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <script src="./assets/js/sxswGallery.js"></script>
 
     <style>
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+        main {
+            padding: 4.5rem 0;
         }
 
-        .grid-item {
+        #cards {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .grid-item img {
+            flex-wrap: wrap;
+            gap: 8px;
             max-width: 100%;
-            height: auto;
+            overflow: hidden;
+            align-items: center;
+            justify-content: center;
         }
 
-        .grid-item h2 {
-            margin: 10px 0 0;
-            font-size: 16px;
+        .card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            border: 0px;
+            overflow: hidden;
+            height: 300px;
+            width: 300px;
+            position: relative;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+
+        .card::before {
+            background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
+                    rgba(255, 255, 255, 0.1),
+                    transparent 40%);
+            border-radius: inherit;
+            content: "";
+            height: 100%;
+            left: 0px;
+            opacity: 0;
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            transition: 500ms;
+        }
+
+        .card::before {
+            background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
+                    rgba(255, 255, 255, 0.1),
+                    transparent 40%);
+        }
+
+        .label {
+            padding-top: 50%;
+            padding-bottom: 50%;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: whitesmoke;
         }
     </style>
 </head>
@@ -38,34 +77,25 @@
 
     <header class="navbar navbar-expand-md navbar-dark fixed-top bg-dark justify-content-center">
         <ul class="nav nav-pills">
-            <li class="nav-item active">
-                <a class="nav-link active" href="./index.html">Home <span class="sr-only">(current)</span></a>
-            </li>
             <li class="nav-item">
+                <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="./portfolio.html">Portfolio</a>
-            </li>
+            </li> -->
             <li class="nav-item">
-                <a class="nav-link" href="./sxsw.html">SXSW</a>
+                <a class="nav-link active" href="./sxsw.html">SXSW</a>
             </li>
         </ul>
     </header>
 
 
-    <main role="main">
-        <div class="grid-container"></div>
-
-        <script>
-            const container = document.querySelector(".grid-container");
-
-            fetch('./assets/img/sxsw/images.json')
-                .then(response => response.json())
-                .then(data => {
-                    data.array.forEach(element => {
-                        console.log(element);
-                    });
-                    // Do something with the parsed JSON data
-                });
-        </script>
+    <main class="container align-self-center" role="main">
+        <h1 style="text-align: center">South by SouthWest Gallery</h1>
+        <p style="text-align: center;">This year, I'm going to the SXSW conference! I'll be putting most (if not all) of
+            my pictures from the conference here, so if you've run into me, you might just be featured!</p>
+        <div id="cards">
+        </div>
     </main>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

@@ -7,6 +7,9 @@ main {
     padding: 0;
     height: 100%;
     width: 100%;
+    background-color: rgb(25, 25, 25);
+    color: whitesmoke;
+    /* overflow: hidden; */
 }
 
 body {
@@ -24,7 +27,11 @@ div.level {
 }
 
 a.nav-link {
-    color: white;
+    color: whitesmoke;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 h1.title {
@@ -38,4 +45,9 @@ p.links {
 
 .linkimages {
     height: 2vh;
+}
+
+.nav-pills .nav-link.active {
+    background-color: goldenrod;
+    color: rgb(52, 58, 64);
 }
