@@ -50,3 +50,7 @@ p.links {
     background-color: goldenrod;
     color: rgb(52, 58, 64);
 }
+
+.navbar-dark {
+    background-color: rgb(32, 32, 32) !important;
+}
