@@ -7,9 +7,8 @@ main {
     padding: 0;
     height: 100%;
     width: 100%;
-    background-color: rgb(25, 25, 25);
-    color: whitesmoke;
-    /* overflow: hidden; */
+    background-color: rgb(25, 25, 25) !important;
+    color: whitesmoke !important;
 }
 
 body {
